@@ -10,6 +10,8 @@ import {
   BakeShadows,
 } from "@react-three/drei";
 import "./style.css";
+import { Car } from "./Car";
+import { Ground } from "./Ground";
 
 
 function CarShow() {

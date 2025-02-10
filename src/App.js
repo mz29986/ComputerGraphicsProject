@@ -13,7 +13,6 @@ import "./style.css";
 import { Car } from "./Car";
 import { Ground } from "./Ground";
 
-
 function CarShow() {
   return (
     <>
@@ -75,6 +74,19 @@ function CarShow() {
       <Ground />
       <ambientLight intensity={1.5} />
       <BakeShadows />
+    </>
+  );
+}
+
+export function App() {
+  return (
+    <>
+      <div id="infoBox" className="info-box"></div>
+      <Suspense fallback={null}>
+        <Canvas shadows>
+          <CarShow />
+        </Canvas>
+      </Suspense>
     </>
   );
 }
